@@ -15,7 +15,7 @@ public class PoinTest {
     }
 
     @Test
-    public void when10to40then3() {
+    public void when14to00then3() {
         Point x = new Point(1, 0);
         Point y = new Point(4, 0);
         int expected = 3;
@@ -25,21 +25,19 @@ public class PoinTest {
 
     @Test
     public void when10to40to00then3() {
-        Point x = new Point(1, 0);
-        Point y = new Point(4, 0);
-        Point z = new Point(0, 0);
+        Point first = new Point(1, 0, 0);
+        Point second = new Point(4, 0, 0);
         int expected = 3;
-        double out = x.distance3D(y);
+        double out = first.distance3D(second);
         Assert.assertEquals(expected, out, 0.01);
     }
 
     @Test
     public void when00to00to20then2() {
-        Point x = new Point(0, 0);
-        Point y = new Point(0, 0);
-        Point z = new Point(2, 0);
+        Point first = new Point(0, 0, 2);
+        Point second = new Point(0, 0, 0);
         int expected = 2;
-        double out = x.distance3D(y);
+        double out = first.distance3D(second);
         Assert.assertEquals(expected, out, 0.01);
     }
 }
