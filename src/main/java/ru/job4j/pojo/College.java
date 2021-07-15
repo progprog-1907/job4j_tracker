@@ -14,4 +14,5 @@ public class College {
         System.out.println(andrey.getGroup());
         System.out.println(andrey.getDateOfAdmission());
     }
+
 }
