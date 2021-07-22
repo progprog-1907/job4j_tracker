@@ -6,6 +6,8 @@ public class Item {
     private String name;
     private static final LocalDateTime current = LocalDateTime.now();
 
+    public Item() {}
+
     public Item(String name) {
         this.name = name;
     }
