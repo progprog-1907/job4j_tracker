@@ -4,8 +4,7 @@ import java.time.format.DateTimeFormatter;
 
 public class StartUI {
     public static void main(String[] args) {
-        LocalDateTime item = Item.getCurrent();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MMMM-EEEE-yyyy HH:mm:ss");
-        System.out.println(item.format(formatter));
+        LocalDateTime item = Item.getCreated();
+        System.out.println(item);
     }
 }
