@@ -48,6 +48,9 @@ public class Tracker {
     }
 
     public boolean replace(int id, Item item) {
+        if (indexOf(id) >= size) {
+            return false;
+        }
         int index = indexOf(id);
         item.setId(id);
         items[index] = item;
@@ -55,6 +58,9 @@ public class Tracker {
     }
 
     public boolean delete(int id) {
+        if (indexOf(id) >= size) {
+            return false;
+        }
         int index = indexOf(id);
         int start = index + 1;
         items[index].setId(id);
