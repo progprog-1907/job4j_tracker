@@ -4,15 +4,6 @@ import java.time.format.DateTimeFormatter;
 
 public class Item {
 
-    @Override
-    public String toString() {
-        return "Item{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", created=" + created.format(FORMATTER) +
-                '}';
-    }
-
     private int id;
     private String name;
     private static final LocalDateTime created = LocalDateTime.now();
@@ -48,5 +39,14 @@ public class Item {
 
     public static LocalDateTime getCreated() {
         return created;
+    }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", created=" + created.format(FORMATTER) +
+                '}';
     }
 }
