@@ -58,16 +58,13 @@ public class Tracker {
     }
 
     public boolean delete(int id) {
-        if (indexOf(id) >= size) {
-            return false;
+        if (indexOf(id) != -1) {
+            int index = indexOf(id);
+            System.arraycopy(items, index + 1, items, index, size - index - 1);
+            items[size - 1] = null;
+            size--;
+            return true;
         }
-        int index = indexOf(id);
-        int start = index + 1;
-        items[index].setId(id);
-        int length = size - index - 1;
-        System.arraycopy(items, start, items, index, length);
-        items[size - 1] = null;
-        size--;
-        return true;
+        return false;
     }
 }
