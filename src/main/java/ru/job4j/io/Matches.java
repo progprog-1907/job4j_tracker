@@ -13,17 +13,10 @@ public class Matches {
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(input.nextLine());
             turn = !turn;
-            if (matches > 3) {
-                System.out.println("вы ввели не корректное число, надо ввести число от 1 до 3");
-                turn = !turn;
-            }
-            else if (count - matches >= 0) {
+            if (matches > 0 && matches <= 3) {
                 count -= matches;
-            } else if (count == 2){
-                System.out.println("Вы можете взять спичек либо 1 либо 2");
-                turn = !turn;
             } else {
-                System.out.println("Вы можете взять только одну спичку");
+                System.out.println("вы ввели не корректное число, надо ввести число от 1 до 3");
                 turn = !turn;
             }
         }
