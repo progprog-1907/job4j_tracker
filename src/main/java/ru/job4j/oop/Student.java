@@ -15,4 +15,9 @@ public class Student {
         petya.music();
         petya.song();
     }
+
+    @Override
+    public String toString() {
+        return "This is Student";
+    }
 }
