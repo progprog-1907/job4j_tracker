@@ -10,9 +10,9 @@ public class StartUI {
             if (select == 0) {
                 StartUI.createItem(scanner, tracker);
             } else if (select == 1) {
-                StartUI.showAllItems(tracker);
+                StartUI.showItem(tracker);
             } else if (select == 2) {
-                StartUI.editItem(scanner, tracker);
+                StartUI.replaceItem(scanner, tracker);
             } else if (select == 3){
                 StartUI.deleteItem(scanner, tracker);
             }else if (select == 4) {
@@ -46,7 +46,7 @@ public class StartUI {
         System.out.println("Добавленная заявка: " + item);
     }
 
-    public static void showAllItems(Tracker tracker) {
+    public static void showItem(Tracker tracker) {
         System.out.println("=== Show all items ====");
         Item[] items = tracker.findAll();
         if (tracker.findAll().length > 0) {
@@ -58,7 +58,7 @@ public class StartUI {
         }
     }
 
-    public static void editItem(Input scanner, Tracker tracker) {
+    public static void replaceItem(Input scanner, Tracker tracker) {
         System.out.println("=== Edit item ====");
         int mutableId = scanner.askInt("Enter id: ");
         String newName = scanner.askStr("Enter new name: ");
