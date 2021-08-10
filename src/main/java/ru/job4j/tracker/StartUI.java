@@ -71,14 +71,12 @@ public class StartUI {
     }
 
     public static void deleteItem(Input scanner, Tracker tracker) {
-        System.out.println("=== Edit item ====");
-        int mutableId = scanner.askInt("Enter id: ");
-        String newName = scanner.askStr("Enter new name: ");
-        Item item = new Item(newName);
-        if (tracker.replace(mutableId, item)) {
-            System.out.println("Заявка изменена успешно.");
+        System.out.println("=== Delete item ====");
+        int id = scanner.askInt("Enter id: ");
+        if (tracker.delete(id)) {
+            System.out.println("Заявка удалена успешно.");
         } else {
-            System.out.println("Ошибка замены заявки.");
+            System.out.println("Ошибка удаления заявки.");
         }
     }
 
