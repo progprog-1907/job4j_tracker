@@ -66,6 +66,6 @@ public class StartUiTest {
         };
         StartUI.deleteItem(new StubInput(answer), tracker);
         Item deleted = tracker.findById(item.getId());
-        assertThat(deleted.getName(), is("null"));
+        assertNull(deleted);
     }
 }
