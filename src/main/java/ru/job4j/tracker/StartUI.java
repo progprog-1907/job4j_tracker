@@ -13,13 +13,13 @@ public class StartUI {
                 StartUI.showItem(tracker);
             } else if (select == 2) {
                 StartUI.replaceItem(scanner, tracker);
-            } else if (select == 3){
+            } else if (select == 3) {
                 StartUI.deleteItem(scanner, tracker);
-            }else if (select == 4) {
+            } else if (select == 4) {
                 StartUI.findItemById(scanner, tracker);
             } else if (select == 5) {
                 StartUI.findItemByName(scanner, tracker);
-            } else if (select == 6){
+            } else if (select == 6) {
                 System.out.println("Exit Program");
                 run = false;
             }
