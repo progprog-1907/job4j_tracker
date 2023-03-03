@@ -1,6 +1,6 @@
 package ru.job4j.oop;
 
-public class Athlete extends Sportsman{
+public class Athlete extends Sportsman {
     @Override
     void run() {
         System.out.println("Быстрая скорость бега");

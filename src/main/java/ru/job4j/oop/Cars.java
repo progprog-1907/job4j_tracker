@@ -22,11 +22,11 @@ public class Cars {
     }
 
     public class Brakes {
-
         public void brake() {
             System.out.println("Торможение");
         }
     }
+
     public class TripComputer {
         public String tripData = "Бортовой компьютер";
         private String model = "Модель TripComputer";

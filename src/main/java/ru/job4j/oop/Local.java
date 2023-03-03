@@ -8,6 +8,7 @@ public class Local {
 
         class FullName {
             public static final String PATRONYMIC = "Empty";
+
             public void printFullName() {
                 System.out.println(name + " " + surname);
                 System.out.println(PATRONYMIC);
