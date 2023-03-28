@@ -1,7 +1,6 @@
 package ru.job4j.tracker;
 
 public class CreateAction implements UserAction {
-
     @Override
     public String name() {
         return "Add new Item";
@@ -16,5 +15,4 @@ public class CreateAction implements UserAction {
         System.out.println("Добавленная заявка: " + item);
         return true;
     }
-
 }
