@@ -25,18 +25,18 @@ public class StartUI {
     }
 
     public static void main(String[] args) {
-        Output output = new ConsoleOutput();
+        Output out = new ConsoleOutput();
         Input input = new ConsoleInput();
         Tracker tracker = new Tracker();
         UserAction[] actions = {
-                new CreateAction(output),
-                new ShowAllAction(output),
-                new ReplaceAction(output),
-                new DeleteAction(output),
-                new FindActionById(output),
-                new FindActionsByName(output),
-                new ExitProgram()
+                new CreateAction(out),
+                new ShowAllAction(out),
+                new ReplaceAction(out),
+                new DeleteAction(out),
+                new FindActionById(out),
+                new FindActionsByName(out),
+                new ExitProgramAction(out)
         };
-        new StartUI(output).init(input, tracker, actions);
+        new StartUI(out).init(input, tracker, actions);
     }
 }
