@@ -13,6 +13,7 @@ public class Fact {
     }
 
     public static void main(String[] args) {
-        new Fact().calc(-1);
-    }
+        int x = new Fact().calc(5);
+        System.out.println(x);
+     }
 }
