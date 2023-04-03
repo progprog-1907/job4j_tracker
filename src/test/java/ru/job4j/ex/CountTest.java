@@ -16,7 +16,6 @@ public class CountTest {
         assertThat(exception.getMessage()).isEqualTo("Start should be less than finish.");
     }
 
-
     @Test
     public void whenNotException() {
         int start = 0;
