@@ -10,7 +10,7 @@ public class User {
         this.valid = valid;
     }
 
-    public  String getUsername() {
+    public String getUsername() {
         return username;
     }
 
