@@ -180,13 +180,12 @@ public class StartUITest {
                         + "=== Exit Program ===" + ln
         );
     }
-    /**
+
     @Test
     public void whenInvalidExit() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {String.valueOf(new ValidateInput().askInt("qwe")),
-                        String.valueOf(new ValidateInput().askInt("0"))}
+                new String[] {"12", "0"}
         );
         Tracker tracker = new Tracker();
         UserAction[] actions = new UserAction[]{
@@ -201,5 +200,5 @@ public class StartUITest {
                         + "Menu." + ln
                         + "0. Exit" + ln
         );
-    } */
+    }
 }
