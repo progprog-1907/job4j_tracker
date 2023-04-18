@@ -25,6 +25,10 @@ public class ValidateInputTest {
         ValidateInput input = new ValidateInput(out, in);
         int select = input.askInt("Enter menu:!");
         assertThat(select).isEqualTo(3);
+        select = input.askInt("Enter menu:!");
+        assertThat(select).isEqualTo(2);
+        select = input.askInt("Enter menu:!");
+        assertThat(select).isEqualTo(1);
     }
 
     @Test
@@ -42,7 +46,7 @@ public class ValidateInputTest {
     public void whenValidateInputMinus() {
         Output out = new StubOutput();
         Input in = new StubInput(
-                new String[] {"-1", "2"}
+                new String[] {"-1"}
         );
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
