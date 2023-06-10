@@ -25,6 +25,5 @@ public class EscapeExample {
         System.out.println("\t\tДва отступа");
 
         System.out.println("Job4jjj\b\b");
-        System.out.println("Hello");
     }
 }
